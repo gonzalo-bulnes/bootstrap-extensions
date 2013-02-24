@@ -16,6 +16,10 @@ Following the Bootstrap conventions, all extension classes are named upon their 
 <div class="form-actions custom-form-actions-bordered"> ... </div>
 ```
 
+See more [documentation and examples][pages] at the project pages.
+
+  [pages]: http://gonzalo-bulnes.github.com/bootstrap-extensions
+
 Credits
 -------
 
