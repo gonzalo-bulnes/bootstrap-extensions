@@ -4,6 +4,18 @@
 // Make the Bootstrap variables available
 @import 'bootstrap/variables.less';
 
+// Mixins ////
+
+
+.bootstrap-and-acidlabs-badges {
+  // Image size: 240x100;
+  background-image: url("../images/bootstrap-acidlabs.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+// Styles ////
+
 body {
   // required by .navbar.navbar-fixed-top
   padding-top: 40px;
@@ -13,5 +25,18 @@ body {
   body {
     // reset by .navbar.navbar-fixed-top fix when being responsive
     padding-top: 0;
+  }
+}
+
+// Specific styles for the index page
+#index {
+
+  // Hero-unit with background-image
+  .hero-unit.custom-hero-unit {
+    .custom-hero-unit-inner {
+      .bootstrap-and-acidlabs-badges;
+      border-top: 1px solid transparent; // force margin-top of fisrt-child to be applied
+      padding-left: 260px; // background-width + 20px
+    }
   }
 }

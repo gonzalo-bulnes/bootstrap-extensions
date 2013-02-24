@@ -1,6 +1,11 @@
 @import 'bootstrap.min.css';
 
 @import 'bootstrap-responsive.min.css';
+.bootstrap-and-acidlabs-badges {
+  background-image: url("../images/bootstrap-acidlabs.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
 body {
   padding-top: 40px;
 }
@@ -8,4 +13,11 @@ body {
   body {
     padding-top: 0;
   }
+}
+#index .hero-unit.custom-hero-unit .custom-hero-unit-inner {
+  background-image: url("../images/bootstrap-acidlabs.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  border-top: 1px solid transparent;
+  padding-left: 260px;
 }
