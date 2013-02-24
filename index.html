@@ -14,20 +14,43 @@
     <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap Extensions</a>
+          <nav class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="download">
+                <a class="buttons" href="https://github.com/gonzalo-bulnes/bootstrap-extensions/zipball/master">Download ZIP</a>
+              </li>
+              <li class="download">
+                <a class="buttons" href="https://github.com/gonzalo-bulnes/bootstrap-extensions/tarball/master">Download TAR</a>
+              </li>
+              <li>
+                <a class="buttons github" href="https://github.com/gonzalo-bulnes/bootstrap-extensions">View On GitHub</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
       <header>
         <h1 class="header">Bootstrap-extensions</h1>
         <p class="header">Some CSS classes which extend Twitter Bootstrap.</p>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/gonzalo-bulnes/bootstrap-extensions/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/gonzalo-bulnes/bootstrap-extensions/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/gonzalo-bulnes/bootstrap-extensions">View On GitHub</a></li>
-        </ul>
-
         <p class="header">This project is maintained by <a class="header name" href="https://github.com/gonzalo-bulnes">gonzalo-bulnes</a></p>
-
-
       </header>
       <section>
         <h1>Bootstrap Extensions</h1>
@@ -75,6 +98,7 @@ limitations under the License.
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
   </body>
 </html>

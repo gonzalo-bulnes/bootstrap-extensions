@@ -1,3 +1,11 @@
 @import 'bootstrap.min.css';
 
 @import 'bootstrap-responsive.min.css';
+body {
+  padding-top: 40px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}
