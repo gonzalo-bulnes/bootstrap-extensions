@@ -20,6 +20,9 @@ cd . # RVM will ask you if you want to trust the .rvmrc, answer: Y(es)
 # Install Jekyll with Bundler
 bundle install
 
+# Compile the LESS files
+lessc styles.less > styles.css
+
 # Start the Jekyll server
 jekyll --server
 ```
