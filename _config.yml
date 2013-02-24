@@ -1,2 +1,2 @@
 ---
-exclude: .rvmrc, Gemfile, Gemfile.lock
+exclude: .rvmrc, Gemfile, Gemfile.lock, styles.less, bootstrap
