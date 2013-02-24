@@ -11,7 +11,13 @@ cd bootstrap-extensions
 git checkout gh-pages
 ```
 
-In order to get a development server up quickly, installing the [Jekyll][jekyll] gem is required. To avoid messing up with you system gems, I use [RVM][rvm]; and to never forget a dependency, I recommend using [Bundler][bundler]. That's much more easy than it seems:
+In order to get a development server up quickly, installing the [Jekyll][jekyll] gem is required. To avoid messing up with you system gems, I use [RVM][rvm]; and to never forget a dependency, I recommend using [Bundler][bundler].
+
+  [jekyll]:https://github.com/mojombo/jekyll
+  [rvm]: https://rvm.io
+  [bundler]: http://gembundler.com/
+
+That's much more easy than it seems:
 
 ```
 # Let RVM create a gemset for you
