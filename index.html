@@ -58,13 +58,78 @@
             <li class="active">
               <a href="#getting-started"><i class="icon-chevron-right"></i> Getting Started</a>
             </li>
+            <li>
+              <a href="#tables"><i class="icon-chevron-right"></i> Tables</a>
+            </li>
           </ul>
           <div class="clearfix"></div>
         </div>
         <div class="span9">
           <article id="getting-started">
-            <h1>Getting Started</h1>
+            <div class="page-header">
+              <h1>Getting Started</h1>
+            </div>
             <p>See the project <a href="https://github.com/gonzalo-bulnes/bootstrap-extensions">README</a> for contributions, credits and licensing.</p>
+
+            <section id="tables">
+              <h2>Tables</h2>
+
+              <h3><code>.custom-table-bordered</code></h3>
+
+              Remove the columns border from a bordered table. Use <code>.custom-table-bordered</code> with <code>.table</code> and <code>.table-bordered</code>.
+
+              <h4>Example</h4>
+              <pre>
+  &lt;table class="table table-bordered custom-table bordered"&gt;
+    ...
+  &lt;/table&gt;</pre>
+
+              <table class="table table-bordered custom-table-bordered">
+                <caption> ... <caption>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Alice</td>
+                    <td>Agostini</td>
+                    <td>alice</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Bob</td>
+                    <td>Niemans</td>
+                    <td>bob</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Charles</td>
+                    <td>Cowalsky</td>
+                    <td>charlie</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4>The code</h4>
+              <pre>
+// Use the .custom-table-bordered class to disable the columns borders.
+// Note: .table and .table-bordered are required to use .custom-table-bordered
+.table.table-bordered.custom-table-bordered {
+  td, th {
+    border-left-width: 0px;
+  &:first-child {
+    border-left-width: 1px;
+    }
+  }
+}</pre>
+            </section>
+
           </article>
         </div>
       </div>
