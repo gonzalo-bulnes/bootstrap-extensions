@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body id="index">
+  <body id="index" data-spy="scroll" data-target=".spy-on-me" data-offset="55">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -52,20 +52,35 @@
     </header>
 
     <div class="container">
-      <section>
-        <h1>Bootstrap Extensions</h1>
-
-<p>Some CSS classes which extend <a href="https://twitter.github.com/bootstrap">Bootstrap</a>.</p>
-<p>This project is maintained by <a class="header name" href="https://github.com/gonzalo-bulnes">gonzalo-bulnes</a></p>
-
-<h2>Conventions</h2>
-
-<p>Following the Bootstrap conventions, all extension classes are named upon their <em>base</em> class name. In order to avoid any conflict in the future, I also prepend our custom classes names with <code>custom</code>.</p>
-
-<p><strong>Example</strong>: <code>.custom-form-actions-bordered</code> extends <code>.form-actions</code> and should be used as follow:</p>
-
-<div class="highlight"><pre><span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">"form-actions custom-form-actions-bordered"</span><span class="o">&gt;</span> <span class="o">...</span> <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
-</pre></div>
+      <div class="row">
+        <div class="span3 spy-on-me">
+          <ul class="nav nav-tabs nav-list nav-stacked custom-nav-tabs-with-icon" data-spy="affix" data-offset="230">
+            <li class="active">
+              <a href="#getting-started"><i class="icon-chevron-right"></i> Getting Started</a>
+            </li>
+            <li class="">
+                <a href="#conventions"><i class="icon-chevron-right"></i> Conventions</a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="span9">
+        <section id="getting-started">
+          <h1>Bootstrap Extensions</h1>
+          <p>Some CSS classes which extend <a href="https://twitter.github.com/bootstrap">Bootstrap</a>.</p>
+          <p>This project is maintained by <a class="header name" href="https://github.com/gonzalo-bulnes">gonzalo-bulnes</a></p>
+        </section>
+        <section id="conventions">
+          <h1>Conventions</h2>
+          <p>Following the Bootstrap conventions, all extension classes are named upon their <em>base</em> class name. In order to avoid any conflict in the future, I also prepend our custom classes names with <code>custom</code>.</p>
+          <p><strong>Example</strong>: <code>.custom-form-actions-bordered</code> extends <code>.form-actions</code> and should be used as follow:</p>
+          <div class="highlight"><pre><span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">"form-actions custom-form-actions-bordered"</span><span class="o">&gt;</span> <span class="o">...</span> <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+          </pre></div>
+        </section>
+        <section id="credits">
+          <p>Some of these extensions were crafted during my work time at <a href="https://github.com/acidlabs">Acid Labs</a>. Thanks for that!</p>
+          <p>Of course, the Bootstrap badge is property of Twitter.</p>
+        </section>
 
 <h2>Credits</h2>
 
@@ -93,9 +108,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 </code></pre>
-      </section>
+        </section>
+      </div>
       <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a>.</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->

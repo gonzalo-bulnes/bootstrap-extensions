@@ -4,6 +4,11 @@
 // Make the Bootstrap variables available
 @import 'bootstrap/variables.less';
 
+// Variables ////
+
+@iconWhiteSpritePath: '../images/glyphicons-halflings-white.png';
+@iconSpritePath: '../images/glyphicons-halflings.png';
+
 // Mixins ////
 
 
@@ -39,4 +44,39 @@ body {
       padding-left: 260px; // background-width + 20px
     }
   }
+}
+
+// Fake the Bootstrap pages nav-list
+// Add icons to list items
+.nav-tabs.custom-nav-tabs-with-icon li {
+    i {
+      background-image: url(@iconSpritePath);
+      float: right;
+      margin-right: -6px;
+      margin-top: 2px;
+      opacity: 0.25;
+    }
+    &.active i {
+      background-image: url(@iconWhiteSpritePath);
+      opacity: 1;
+    }
+}
+
+// Fake the Bootstrap pages nav-list
+// Ensure the correct colors are applied
+.nav-list.nav-tabs > .active > a {
+  &, &:hover, &:focus {
+    // .nav-list > .active > a styles should be applied
+    background-color: #0088CC;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+// Adjust the affix nav-list to reproduce
+// the Bootstrap documentation nav-list behavior
+.affix, .affix-bottom {
+  position: fixed; // by default when .affix, useful when .affix-bottom
+  top: 73px; // the nav-list shouldn't move when going .affix
+  width: 240px; // it shouldn't shrink either
 }
