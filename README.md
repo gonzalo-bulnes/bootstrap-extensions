@@ -3,12 +3,12 @@ Bootstrap Extensions
 
 Some CSS classes which extend [Bootstrap][bootstrap].
 
-  [bootstrap]: https://twitter.github.com/bootstrap
+  [bootstrap]: http://twitter.github.com/bootstrap
 
 Conventions
 -----------
 
-Following the Bootstrap conventions, all extension classes are named upon their _base_ class name. In order to avoid any conflict in the future, I also prepend our custom classes names with `custom`.
+Following the Bootstrap conventions, all extension classes are named upon their _base_ class name. In order to avoid any conflict in the future, I also prepend the custom classes names with `custom`.
 
 **Example**: `.custom-form-actions-bordered` extends `.form-actions` and should be used as follow:
 
