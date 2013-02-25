@@ -19,7 +19,7 @@ In order to get a development server up quickly, installing the [Jekyll][jekyll]
 
 That's much more easy than it seems:
 
-```
+```bash
 # Let RVM create a gemset for you
 cd . # RVM will ask you if you want to trust the .rvmrc, answer: Y(es)
 
@@ -34,3 +34,20 @@ jekyll --server
 ```
 
 You server is up at [http://localhost:4000](http://localhost:4000).
+
+### Version control
+
+**Important**: You shall commit an up-to-date `stylesheets/styles.css` file along with `stylesheets/styles.less`.
+
+Jekyll doesn't compile the LESS files, if you don't provide the up-to-date CSS your changes won't appear on the Github pages, the CSS file version won't match the LESS file version and I'll be sad.
+
+```bash
+# Before committing your changes...
+
+# ... don't forget to compile the LESS files!
+lessc styles.less > styles.css
+
+git add stylesheets/styles*
+git commit
+
+```
