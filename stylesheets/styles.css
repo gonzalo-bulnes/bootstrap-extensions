@@ -21,6 +21,12 @@ body {
   border-top: 1px solid transparent;
   padding-left: 260px;
 }
+@media (max-width: 979px) {
+  #index .hero-unit.custom-hero-unit .custom-hero-unit-inner {
+    background-image: none;
+    padding-left: 0;
+  }
+}
 .nav-tabs.custom-nav-tabs-with-icon li i {
   background-image: url('../images/glyphicons-halflings.png');
   float: right;

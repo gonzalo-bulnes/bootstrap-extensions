@@ -46,6 +46,18 @@ body {
   }
 }
 
+// Disable the hero-unit with background-image on narrow screens
+@media (max-width: 979px) {
+  #index {
+    .hero-unit.custom-hero-unit {
+      .custom-hero-unit-inner {
+        background-image: none;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
 // Fake the Bootstrap pages nav-list
 // Add icons to list items
 .nav-tabs.custom-nav-tabs-with-icon li {
