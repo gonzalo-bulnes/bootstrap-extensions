@@ -57,3 +57,14 @@ body {
   margin-top: 70px;
   padding: 30px 0;
 }
+article {
+  margin: 1em;
+}
+.table.table-bordered.custom-table-bordered td,
+.table.table-bordered.custom-table-bordered th {
+  border-left-width: 0px;
+}
+.table.table-bordered.custom-table-bordered td:first-child,
+.table.table-bordered.custom-table-bordered th:first-child {
+  border-left-width: 1px;
+}
