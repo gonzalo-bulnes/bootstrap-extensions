@@ -27,6 +27,8 @@ Some of these extensions were crafted during my work time at [Acid Labs][acidlab
 
   [acidlabs]: https://github.com/acidlabs
 
+Of course, the Bootstrap name and badge are property of Twitter.
+
 Contribute
 ----------
 
