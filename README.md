@@ -45,7 +45,7 @@ Jekyll doesn't compile the LESS files, if you don't provide the up-to-date CSS y
 # Before committing your changes...
 
 # ... don't forget to compile the LESS files!
-lessc styles.less > styles.css
+lessc stylesheets/styles.less > stylesheets/styles.css
 
 git add stylesheets/styles*
 git commit
