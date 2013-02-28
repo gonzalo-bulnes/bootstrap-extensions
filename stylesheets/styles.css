@@ -6,6 +6,11 @@
   background-repeat: no-repeat;
   background-position: left top;
 }
+.bootstrap-and-acidlabs-and-kolorsheep-badges {
+  background-image: url("../images/bootstrap-acidlabs-kolorsheep.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
 body {
   padding-top: 40px;
 }
@@ -15,11 +20,11 @@ body {
   }
 }
 #index .hero-unit.custom-hero-unit .custom-hero-unit-inner {
-  background-image: url("../images/bootstrap-acidlabs.png");
+  background-image: url("../images/bootstrap-acidlabs-kolorsheep.png");
   background-repeat: no-repeat;
   background-position: left top;
   border-top: 1px solid transparent;
-  padding-left: 260px;
+  padding-left: 400px;
 }
 @media (max-width: 979px) {
   #index .hero-unit.custom-hero-unit .custom-hero-unit-inner {
