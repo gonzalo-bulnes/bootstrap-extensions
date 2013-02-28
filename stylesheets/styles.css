@@ -1,6 +1,8 @@
 @import 'bootstrap.min.css';
 
 @import 'bootstrap-responsive.min.css';
+
+@import 'font-awesome.min.css';
 .bootstrap-and-acidlabs-badges {
   background-image: url("../images/bootstrap-acidlabs.png");
   background-repeat: no-repeat;
@@ -36,6 +38,15 @@ body {
 }
 .nav-tabs.custom-nav-tabs-with-icon li.active i {
   background-image: url('../images/glyphicons-halflings-white.png');
+  opacity: 1;
+}
+.nav-tabs.custom-nav-tabs-with-font-awesome-icon li i {
+  float: right;
+  margin-right: -6px;
+  margin-top: 3px;
+  opacity: 0.25;
+}
+.nav-tabs.custom-nav-tabs-with-font-awesome-icon li.active i {
   opacity: 1;
 }
 .nav-list.nav-tabs > .active > a,

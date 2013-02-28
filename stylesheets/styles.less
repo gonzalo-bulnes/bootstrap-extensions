@@ -1,5 +1,6 @@
 @import 'bootstrap.min.css';
 @import 'bootstrap-responsive.min.css';
+@import 'font-awesome.min.css';
 
 // Make the Bootstrap variables available
 @import 'bootstrap/variables.less';
@@ -70,6 +71,20 @@ body {
     }
     &.active i {
       background-image: url(@iconWhiteSpritePath);
+      opacity: 1;
+    }
+}
+
+// Fake the Bootstrap pages nav-list
+// Use Font Awesome icons in list items
+.nav-tabs.custom-nav-tabs-with-font-awesome-icon li {
+    i {
+      float: right;
+      margin-right: -6px;
+      margin-top: 3px;
+      opacity: 0.25;
+    }
+    &.active i {
       opacity: 1;
     }
 }
