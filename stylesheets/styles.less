@@ -131,3 +131,86 @@ article {
     }
   }
 }
+
+// Use the .custom-btn-icon to create pixel-perfect icon buttons, or icon-only buttons
+// All standard sizes and color are also available!
+//
+// Example:
+//
+// <!-- To do -->
+//
+// Note: .btn is required to use .custom-btn-icon. Both .btn and .btn-link are required
+// to create icon-only buttons.
+.btn.custom-btn-icon {
+  // should be used with .btn.btn-link for icon-olny buttons
+  color: @btnBackground;
+  font-size: 24px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+
+  &.custom-btn-icon-mini {
+    font-size: 16px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+
+  &.custom-btn-icon-small {
+    font-size: 20px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+
+  &.custom-btn-icon-large {
+    font-size: 32px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  &:focus, &:hover {
+    color: @btnBackgroundHighlight;
+    text-decoration: none;
+  }
+
+  &.custom-btn-icon-link {
+    color: @btnPrimaryBackground;
+    &:focus, &:hover {
+      color: @btnPrimaryBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-info {
+    color: @btnInfoBackground;
+    &:focus, &:hover {
+      color: @btnInfoBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-success {
+    color: @btnSuccessBackground;
+    &:focus, &:hover {
+      color: @btnSuccessBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-warning {
+    color: @btnWarningBackground;
+    &:focus, &:hover {
+      color: @btnWarningBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-danger {
+    color: @btnDangerBackground;
+    &:focus, &:hover {
+      color: @btnDangerBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-inverse {
+    color: @btnInverseBackground;
+    &:focus, &:hover {
+      color: @btnInverseBackgroundHighlight;
+    }
+  }
+}
