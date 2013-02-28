@@ -60,12 +60,15 @@
     <div class="container">
       <div class="row">
         <div class="span3 spy-on-me">
-          <ul class="nav nav-tabs nav-list nav-stacked custom-nav-tabs-with-icon" data-spy="affix" data-offset="230">
+          <ul class="nav nav-tabs nav-list nav-stacked custom-nav-tabs-with-font-awesome-icon" data-spy="affix" data-offset="230">
             <li class="active">
               <a href="#getting-started"><i class="icon-chevron-right"></i> Getting Started</a>
             </li>
             <li>
               <a href="#tables"><i class="icon-chevron-right"></i> Tables</a>
+            </li>
+            <li>
+              <a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a>
             </li>
           </ul>
           <div class="clearfix"></div>
@@ -86,9 +89,9 @@
 
               <h4>Example</h4>
               <pre>
-  &lt;table class="table table-bordered custom-table-bordered"&gt;
-    ...
-  &lt;/table&gt;</pre>
+&lt;table class="table table-bordered custom-table-bordered"&gt;
+  ...
+&lt;/table&gt;</pre>
 
               <table class="table table-bordered custom-table-bordered">
                 <thead>
@@ -134,7 +137,197 @@
   }
 }</pre>
             </section>
+            <section id="buttons">
+              <h2>Buttons</h2>
 
+              <h3><code>.custom-btn-icon</code></h3>
+
+              Pixel-perfect icon buttons. Do notice that <code>.custom-btn-icon</code> must be used with <code>.btn</code>, but may also be used with <code>.btn-link</code> for <strong>icon-only</strong> buttons.
+
+              Large, normal, small and mini icon-only buttons can be created in any standard color you want! <em>Example</em>: use <code>.btn.custon-btn-icon.custom-btn-icon-small.custom-btn-icon-warning</code> for a nice small yellow icon-only button.
+
+              <h4>Example</h4>
+              <pre>
+&lt;a href="#" class="btn btn-link custom-btn-icon custom-btn-icon-danger"&gt;
+  &lt;i class="icon-heart"&gt;&lt;/i&gt;
+&lt;/a&gt;</pre>
+
+              <div class="row">
+                <div clasS="span3">
+                  <h5>Color buttons, inverse icons</h5>
+                  <a href="#" class="btn btn-info custom-btn-icon"><i class="icon-tint"></i></a>
+                  <a href="#" class="btn custom-btn-icon custom-btn-icon-inverse"><i class="icon-tag"></i></a>
+                </div>
+                <div clasS="span3">
+                  <h5>Color icons</h5>
+                  <a href="#" class="btn custom-btn-icon custom-btn-icon-danger"><i class="icon-remove"></i></a>
+                  <a href="#" class="btn custom-btn-icon custom-btn-icon-success"><i class="icon-ok"></i></a>
+                </div>
+                <div clasS="span2"><!-- why did .span3 not fit here?? -->
+                  <h5>Icon-only buttons</h5>
+                  <a href="#" class="btn btn-link custom-btn-icon custom-btn-icon-inverse"><i class="icon-coffee"></i></a>
+                  <a href="#" class="btn btn-link custom-btn-icon custom-btn-icon-warning"><i class="icon-star"></i></a>
+                  <a href="#" class="btn btn-link custom-btn-icon custom-btn-icon-danger"><i class="icon-heart"></i></a>
+                </div>
+              </div>
+              <br/>
+              <h4>The SCSS code</h4>
+              <pre>
+/* Icon buttons, must be used with .btn, see comments for options. */
+.btn.custom-btn-icon {
+  /* should be used with .btn.btn-link for icon-olny buttons */
+  color: $btnBackground;
+  font-size: 24px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+
+  &.custom-btn-icon-mini {
+    font-size: 16px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+
+  &.custom-btn-icon-small {
+    font-size: 20px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+
+  &.custom-btn-icon-large {
+    font-size: 32px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  &:focus, &:hover {
+    color: $btnBackgroundHighlight;
+    text-decoration: none;
+  }
+
+  &.custom-btn-icon-link {
+    color: $btnPrimaryBackground;
+    &:focus, &:hover {
+      color: $btnPrimaryBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-info {
+    color: $btnInfoBackground;
+    &:focus, &:hover {
+      color: $btnInfoBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-success {
+    color: $btnSuccessBackground;
+    &:focus, &:hover {
+      color: $btnSuccessBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-warning {
+    color: $btnWarningBackground;
+    &:focus, &:hover {
+      color: $btnWarningBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-danger {
+    color: $btnDangerBackground;
+    &:focus, &:hover {
+      color: $btnDangerBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-inverse {
+    color: $btnInverseBackground;
+    &:focus, &:hover {
+      color: $btnInverseBackgroundHighlight;
+    }
+  }
+}</pre>
+              <h4>The LESS code</h4>
+              <pre>
+// Use the .custom-btn-icon to create pixel-perfect icon buttons, or icon-only buttons
+// All standard sizes and color are also available!
+// Note: .btn is required to use .custom-btn-icon. Both .btn and .btn-link are required
+// to create icon-only buttons.
+.btn.custom-btn-icon {
+  // should be used with .btn.btn-link for icon-olny buttons
+  color: @btnBackground;
+  font-size: 24px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+
+  &.custom-btn-icon-mini {
+    font-size: 16px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+
+  &.custom-btn-icon-small {
+    font-size: 20px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+
+  &.custom-btn-icon-large {
+    font-size: 32px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  &:focus, &:hover {
+    color: @btnBackgroundHighlight;
+    text-decoration: none;
+  }
+
+  &.custom-btn-icon-link {
+    color: @btnPrimaryBackground;
+    &:focus, &:hover {
+      color: @btnPrimaryBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-info {
+    color: @btnInfoBackground;
+    &:focus, &:hover {
+      color: @btnInfoBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-success {
+    color: @btnSuccessBackground;
+    &:focus, &:hover {
+      color: @btnSuccessBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-warning {
+    color: @btnWarningBackground;
+    &:focus, &:hover {
+      color: @btnWarningBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-danger {
+    color: @btnDangerBackground;
+    &:focus, &:hover {
+      color: @btnDangerBackgroundHighlight;
+    }
+  }
+
+  &.custom-btn-icon-inverse {
+    color: @btnInverseBackground;
+    &:focus, &:hover {
+      color: @btnInverseBackgroundHighlight;
+    }
+  }
+}</pre>
+
+            </section>
           </article>
         </div>
       </div>
