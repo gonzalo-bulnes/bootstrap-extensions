@@ -106,3 +106,30 @@
     }
   }
 }
+
+// Remove the head from a .table
+// See also .table-bordered, .custom-table-bordered
+//
+// Example:
+//
+//    <table class="table custom-table-headless">
+//      ...
+//    </table>
+//
+// Note: .table is required to use .custom-table-headless
+.table.custom-table-headless {
+  border-top: 0;
+  margin-top: 40px;
+  thead {
+    left: -9999px;
+    position: absolute;
+  }
+  tr:first-child {
+    td:first-child {
+      border-top-left-radius: 4px;
+    }
+    td:last-child {
+      border-top-right-radius: 4px;
+    }
+  }
+}
