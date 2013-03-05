@@ -83,7 +83,7 @@
             <section id="tables">
               <h2>Tables</h2>
 
-              <h3><code>.custom-table-bordered</code></h3>
+              <h3 class="extension-title"><code>.custom-table-bordered</code></h3>
 
               Remove the columns border from a bordered table. Use <code>.custom-table-bordered</code> with <code>.table</code> and <code>.table-bordered</code>.
 
@@ -136,11 +136,144 @@
     }
   }
 }</pre>
+
+              <h3 class="extension-title"><code>.custom-table-headless</code></h3>
+
+              Remove the head from a table. Use <code>.custom-table-headless</code> with <code>.table</code>. You may also use it with `.table-bordered` and `.custom-table-bordered`.
+
+              <h4>Example</h4>
+
+              <pre>
+&lt;table class="table custom-table-headless"&gt;
+  ...
+&lt;/table&gt;</pre>
+
+              <table class="table custom-table-headless">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Alice</td>
+                    <td>Agostini</td>
+                    <td>alice</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Bob</td>
+                    <td>Niemans</td>
+                    <td>bob</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Charles</td>
+                    <td>Cowalsky</td>
+                    <td>charlie</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="row">
+                <div class="span4">
+                  <table class="table table-bordered custom-table-headless">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Alice</td>
+                        <td>Agostini</td>
+                        <td>alice</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Bob</td>
+                        <td>Niemans</td>
+                        <td>bob</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Charles</td>
+                        <td>Cowalsky</td>
+                        <td>charlie</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="span4 pull-right">
+                  <table class="table table-bordered custom-table-bordered custom-table-headless">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Alice</td>
+                        <td>Agostini</td>
+                        <td>alice</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Bob</td>
+                        <td>Niemans</td>
+                        <td>bob</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Charles</td>
+                        <td>Cowalsky</td>
+                        <td>charlie</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <h4>The code</h4>
+
+              <pre>
+// Remove the head from a .table
+// See also .table-bordered, .custom-btn-bordered
+// Note: .table is required to use .custom-table-headless
+.table.custom-table-headless {
+  border-top: 0;
+  margin-top: 40px;
+  thead {
+    left: -9999px;
+    position: absolute;
+  }
+  tr:first-child {
+    td:first-child {
+      border-top-left-radius: 4px;
+    }
+    td:last-child {
+      border-top-right-radius: 4px;
+    }
+  }
+}</pre>
+
             </section>
             <section id="buttons">
               <h2>Buttons</h2>
 
-              <h3><code>.custom-btn-icon</code></h3>
+              <h3 class="extension-title"><code>.custom-btn-icon</code></h3>
 
               Pixel-perfect icon buttons. Do notice that <code>.custom-btn-icon</code> must be used with <code>.btn</code> and <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>, but may also be used with <code>.btn-link</code> for <strong>icon-only</strong> buttons.
 

@@ -34,6 +34,9 @@ body {
     padding-left: 0;
   }
 }
+.extension-title {
+  border-bottom: 1px dotted #DDDDDD;
+}
 .nav-tabs.custom-nav-tabs-with-icon li i {
   background-image: url('../images/glyphicons-halflings.png');
   float: right;
@@ -152,4 +155,18 @@ article {
 .btn.custom-btn-icon.custom-btn-icon-inverse:focus,
 .btn.custom-btn-icon.custom-btn-icon-inverse:hover {
   color: #222222;
+}
+.table.custom-table-headless {
+  border-top: 0;
+  margin-top: 40px;
+}
+.table.custom-table-headless thead {
+  left: -9999px;
+  position: absolute;
+}
+.table.custom-table-headless tr:first-child td:first-child {
+  border-top-left-radius: 4px;
+}
+.table.custom-table-headless tr:first-child td:last-child {
+  border-top-right-radius: 4px;
 }
