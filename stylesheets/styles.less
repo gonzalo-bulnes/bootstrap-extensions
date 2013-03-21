@@ -12,34 +12,18 @@
 
 // Mixins ////
 
-
-.bootstrap-and-acidlabs-badges {
-  // Image size: 240x100;
-  background-image: url("../images/bootstrap-acidlabs.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
 .bootstrap-and-acidlabs-and-kolorsheep-badges {
   // Image size: 380x100;
   background-image: url("../images/bootstrap-acidlabs-kolorsheep.png");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: center top;
 }
 
 
 // Styles ////
 
 body {
-  // required by .navbar.navbar-fixed-top
-  padding-top: 40px;
-}
-
-@media (max-width: 979px) {
-  body {
-    // reset by .navbar.navbar-fixed-top fix when being responsive
-    padding-top: 0;
-  }
+  background-color: @grayLighter;
 }
 
 // Specific styles for the index page
@@ -50,7 +34,11 @@ body {
     .custom-hero-unit-inner {
       .bootstrap-and-acidlabs-and-kolorsheep-badges;
       border-top: 1px solid transparent; // force margin-top of fisrt-child to be applied
-      padding-left: 400px; // background-width + 20px
+      padding-top: 120px; // background-width + 20px
+      text-align: center;
+      p {
+        margin-top: 10px;
+      }
     }
   }
 }
@@ -61,210 +49,8 @@ body {
     .hero-unit.custom-hero-unit {
       .custom-hero-unit-inner {
         background-image: none;
-        padding-left: 0;
+        padding-top: 0;
       }
-    }
-  }
-}
-
-// Headings decoration
-.extension-title {
-  border-bottom: 1px dotted #DDDDDD;
-}
-
-// Fake the Bootstrap pages nav-list
-// Add icons to list items
-.nav-tabs.custom-nav-tabs-with-icon li {
-    i {
-      background-image: url(@iconSpritePath);
-      float: right;
-      margin-right: -6px;
-      margin-top: 2px;
-      opacity: 0.25;
-    }
-    &.active i {
-      background-image: url(@iconWhiteSpritePath);
-      opacity: 1;
-    }
-}
-
-// Fake the Bootstrap pages nav-list
-// Use Font Awesome icons in list items
-.nav-tabs.custom-nav-tabs-with-font-awesome-icon li {
-    i {
-      float: right;
-      margin-right: -6px;
-      margin-top: 3px;
-      opacity: 0.25;
-    }
-    &.active i {
-      opacity: 1;
-    }
-}
-
-// Fake the Bootstrap pages nav-list
-// Ensure the correct colors are applied
-.nav-list.nav-tabs > .active > a {
-  &, &:hover, &:focus {
-    // .nav-list > .active > a styles should be applied
-    background-color: #0088CC;
-    color: #FFFFFF;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  }
-}
-
-// Adjust the affix nav-list to reproduce
-// the Bootstrap documentation nav-list behavior
-.affix, .affix-bottom {
-  position: fixed; // by default when .affix, useful when .affix-bottom
-  top: 73px; // the nav-list shouldn't move when going .affix
-  width: 240px; // it shouldn't shrink either
-}
-
-// Footer
-#footer {
-  background-color: #F5F5F5;
-  border-top: 1px solid #E5E5E5;
-  margin-top: 70px;
-  padding: 30px 0;
-}
-
-// Spacings
-article {
-  margin: 1em;
-}
-
-// Bootstrap Extensions ////
-
-// Use the .custom-table-bordered class to disable the columns borders.
-//
-// Example:
-//
-//    <table class="table table-bordered custom-table bordered">
-//      <caption> ... <caption>
-//      <thead>
-//        ...
-//      </thead>
-//      <tbody>
-//        ...
-//      </tbody>
-//    </table>
-//
-// Note: .table and .table-bordered are required to use .custom-table-bordered
-.table.table-bordered.custom-table-bordered {
-  td, th {
-    border-left-width: 0px;
-  &:first-child {
-    border-left-width: 1px;
-    }
-  }
-}
-
-// Use the .custom-btn-icon to create pixel-perfect icon buttons, or icon-only buttons
-// All standard sizes and color are also available!
-//
-// Example:
-//
-// <!-- To do -->
-//
-// Note: .btn is required to use .custom-btn-icon. Both .btn and .btn-link are required
-// to create icon-only buttons.
-.btn.custom-btn-icon {
-  // should be used with .btn.btn-link for icon-olny buttons
-  color: @btnBackground;
-  font-size: 24px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-
-  &.custom-btn-icon-mini {
-    font-size: 16px;
-    padding-bottom: 6px;
-    padding-top: 6px;
-  }
-
-  &.custom-btn-icon-small {
-    font-size: 20px;
-    padding-bottom: 4px;
-    padding-top: 4px;
-  }
-
-  &.custom-btn-icon-large {
-    font-size: 32px;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-
-  &:focus, &:hover {
-    color: @btnBackgroundHighlight;
-    text-decoration: none;
-  }
-
-  &.custom-btn-icon-link {
-    color: @btnPrimaryBackground;
-    &:focus, &:hover {
-      color: @btnPrimaryBackgroundHighlight;
-    }
-  }
-
-  &.custom-btn-icon-info {
-    color: @btnInfoBackground;
-    &:focus, &:hover {
-      color: @btnInfoBackgroundHighlight;
-    }
-  }
-
-  &.custom-btn-icon-success {
-    color: @btnSuccessBackground;
-    &:focus, &:hover {
-      color: @btnSuccessBackgroundHighlight;
-    }
-  }
-
-  &.custom-btn-icon-warning {
-    color: @btnWarningBackground;
-    &:focus, &:hover {
-      color: @btnWarningBackgroundHighlight;
-    }
-  }
-
-  &.custom-btn-icon-danger {
-    color: @btnDangerBackground;
-    &:focus, &:hover {
-      color: @btnDangerBackgroundHighlight;
-    }
-  }
-
-  &.custom-btn-icon-inverse {
-    color: @btnInverseBackground;
-    &:focus, &:hover {
-      color: @btnInverseBackgroundHighlight;
-    }
-  }
-}
-
-// Remove the head from a .table
-//
-// Example:
-//
-//    <table class="table custom-table-headless">
-//      ...
-//    </table>
-//
-// Note: .table is required to use .custom-table-headless
-.table.custom-table-headless {
-  border-top: 0;
-  margin-top: 40px;
-  thead {
-    left: -9999px;
-    position: absolute;
-  }
-  tr:first-child {
-    td:first-child {
-      border-top-left-radius: 4px;
-    }
-    td:last-child {
-      border-top-right-radius: 4px;
     }
   }
 }
