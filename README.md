@@ -5,6 +5,11 @@ Some CSS classes which extend [Bootstrap][bootstrap].
 
   [bootstrap]: http://twitter.github.com/bootstrap
 
+**Notice**: Our Bootstrap extensions have moved and they are now [maintained by Acid Labs][acidlabs]. I'll be pleased to receive your contributions on [this new repository][acidlabs-be].
+
+  [acidlabs]: http://acidlabs.github.com/bootstrap-extensions
+  [acidlabs-be]: https://github.com/acidlabs/bootstrap-extensions
+
 Conventions
 -----------
 
